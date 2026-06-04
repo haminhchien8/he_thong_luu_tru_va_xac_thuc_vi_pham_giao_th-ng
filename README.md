@@ -11,14 +11,17 @@
 [![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
-<p align="center">
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10-blue?logo=python" alt="Python"></a>
-  <a href="https://github.com/ultralytics/ultralytics"><img src="https://img.shields.io/badge/YOLOv8-Ultralytics-orange" alt="YOLOv8"></a>
-  <a href="https://streamlit.io/"><img src="https://img.shields.io/badge/Streamlit-WebApp-red?logo=streamlit" alt="Streamlit"></a>
-  <a href="https://ethereum.org/"><img src="https://img.shields.io/badge/Blockchain-Ethereum-blueviolet?logo=ethereum" alt="Blockchain"></a>
-  <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-Database-green?logo=sqlite" alt="SQLite"></a>
-</p>
+</div>
+    <p align="center">
+    [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+    [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)](https://github.com/ultralytics/ultralytics)
+    [![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red?logo=streamlit)](https://streamlit.io/)
+    [![Blockchain](https://img.shields.io/badge/Blockchain-Ethereum-blueviolet?logo=ethereum)](https://ethereum.org/)
+    [![SQLite](https://img.shields.io/badge/SQLite-Database-green?logo=sqlite)](https://www.sqlite.org/)
 
+  </p>
+
+</div>
 ---
 <h3 align="center">
 🚦 Giải pháp phát hiện và xác thực vi phạm giao thông bằng AI và Blockchain</h3>
