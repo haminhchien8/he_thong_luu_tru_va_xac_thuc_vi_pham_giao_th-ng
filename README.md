@@ -20,7 +20,8 @@
 </p>
 
 ---
-<h3 align="center">🚦 Giải pháp phát hiện và xác thực vi phạm giao thông bằng AI và Blockchain</h3>
+<h3 align="center">
+🚦 Giải pháp phát hiện và xác thực vi phạm giao thông bằng AI và Blockchain</h3>
 
 <p align="center">
 <strong>
@@ -31,7 +32,6 @@ Hệ thống sử dụng mô hình YOLOv8 để phát hiện người điều kh
 ---
 
 ## 📝 Giới thiệu dự án
-
 Dự án tập trung vào việc xác thực và bảo vệ tính toàn vẹn của ảnh vi phạm bằng công nghệ Blockchain kết hợp mã băm SHA-256. Các chức năng cốt lõi bao gồm:
 * **Lưu mã băm SHA-256** của ảnh vi phạm gốc để tạo dấu vết số cố định.
 * **Xác thực tính toàn vẹn** dữ liệu nhanh chóng và trực quan ngay trên giao diện Web.
