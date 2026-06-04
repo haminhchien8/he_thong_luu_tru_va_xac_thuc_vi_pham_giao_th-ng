@@ -2,9 +2,7 @@
 
 <div align="center">
 
-**TRƯỜNG ĐẠI HỌC ĐẠI NAM**  
-**KHOA CÔNG NGHỆ THÔNG TIN**  
-**AloTLab - Faculty of Information Technology**
+**TRƯỜNG ĐẠI HỌC ĐẠI NAM** **KHOA CÔNG NGHỆ THÔNG TIN** **AloTLab - Faculty of Information Technology**
 
 ---
 
@@ -41,7 +39,7 @@ Dự án tập trung vào việc xác thực và bảo vệ tính toàn vẹn c�
 Quy trình vận hành của hệ thống bao gồm 7 bước khép kín từ khâu thu thập dữ liệu hiện trường cho đến bước xác thực cuối cùng:
 
 <p align="center">
-  <img src="6423999141913011780.jpeg" alt="Kiến trúc hệ thống" width="600"/>
+  <img src="Porter.png" alt="Kiến trúc hệ thống và Giao diện" width="750"/>
 </p>
 
 1. **Thu thập dữ liệu:** Tiếp nhận luồng dữ liệu hình ảnh hoặc video từ hệ thống camera giám sát giao thông.
@@ -51,16 +49,6 @@ Quy trình vận hành của hệ thống bao gồm 7 bước khép kín từ kh
 5. **Cảnh báo:** Tự động đẩy thông tin và ảnh bằng chứng trực tiếp về ứng dụng **Telegram Bot** của lực lượng chức năng.
 6. **Dashboard:** Giao diện Web trực quan hiển thị danh sách vi phạm, xem chi tiết ảnh chụp và thống kê số liệu quản lý.
 7. **Xác thực:** Module đối sánh mã hash giúp kiểm tra tính vẹn toàn, phát hiện ngay nếu bằng chứng bị can thiệp.
-
----
-
-## 📸 Giao diện ứng dụng
-
-Hệ thống cung cấp một bảng điều khiển (Dashboard) toàn diện tích hợp đầy đủ tính năng từ quản lý danh sách vi phạm, tra cứu chi tiết hình ảnh nhận diện cho đến biểu đồ thống kê trực quan theo ngày.
-
-<p align="center">
-  <img src="Screenshot 2026-06-04 150013.png" alt="Giao diện ứng dụng" width="800"/>
-</p>
 
 ---
 
@@ -148,3 +136,10 @@ Tác giả thực hiện: Hà Minh Chiến
 Đơn vị: AloTLab - Khoa Công nghệ thông tin - Trường Đại học Đại Nam
 
 Lĩnh vực nghiên cứu: AI + Blockchain + IoT + Computer Vision
+
+💡 Việc bạn cần làm bây giờ:
+Sao chép toàn bộ khối mã Markdown ở trên.
+
+Mở file README.md trong IDE (như VS Code) của bạn ra, xóa sạch nội dung cũ đi và dán nội dung này vào.
+
+Lưu file lại (Ctrl + S), lúc này mã nguồn đã gọi trực tiếp ảnh Porter.png (đúng viết hoa chữ P) nên sơ đồ và poster của bạn sẽ lập tức hiển thị sắc nét trên giao diện!
