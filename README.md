@@ -13,8 +13,6 @@
 
 </div>
 
----
-
 [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)](https://github.com/ultralytics/ultralytics)
 [![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red?logo=streamlit)](https://streamlit.io/)
