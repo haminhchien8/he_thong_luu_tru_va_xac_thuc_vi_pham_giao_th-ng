@@ -94,9 +94,23 @@ def load_css() -> None:
             box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
         }
 
-        div[data-testid="stMetricLabel"],
-        div[data-testid="stMetricValue"] {
-            color: #334155;
+        /* Fix: Streamlit tự set visibility="0" trên label, cần override */
+        label[data-testid="stMetricLabel"],
+        label[data-testid="stMetricLabel"] * {
+            visibility: visible !important;
+            color: #334155 !important;
+            font-size: 0.82rem !important;
+            font-weight: 500 !important;
+        }
+
+        /* Fix: target giá trị số */
+        div[data-testid="stMetricValue"],
+        div[data-testid="stMetricValue"] > div,
+        div[data-testid="stMetricValue"] * {
+            color: #1f2937 !important;
+            font-size: 1.9rem !important;
+            font-weight: 700 !important;
+            visibility: visible !important;
         }
 
         .detail-box {
