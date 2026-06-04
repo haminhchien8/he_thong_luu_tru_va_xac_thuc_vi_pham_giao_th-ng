@@ -1,73 +1,133 @@
-# YOLO Helmet Detection
+# 🛡️ HỆ THỐNG LƯU TRỮ VÀ XÁC THỰC VI PHẠM GIAO THÔNG KHÔNG ĐỘI MŨ BẢO HIỂM
 
-Ứng dụng Streamlit nhận diện người không đội mũ bảo hiểm bằng YOLO, lưu ảnh bằng chứng, tạo SHA-256 hash và lưu dữ liệu vi phạm vào SQLite.
+<div align="center">
 
-Project đang hỗ trợ 2 chế độ:
+<p align="center">
+  <img src="logo_truong.png" alt="Logo Trường" width="180"/>
+  <img src="logo_khoa.png" alt="Logo Khoa" width="180"/>
+</p>
 
-- Local: lưu hash vào SQLite và tạo mã `local-chain:...`
-- Blockchain thật: gửi hash lên smart contract nếu đã cấu hình Web3
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red?logo=streamlit)
+![Blockchain](https://img.shields.io/badge/Blockchain-Ethereum-blueviolet)
+![SQLite](https://img.shields.io/badge/SQLite-Database-green)
 
-## 1. Kích hoạt môi trường
+</div>
 
-Project dùng Conda env:
+<h3 align="center">🚦 Giải pháp phát hiện và xác thực vi phạm giao thông bằng AI và Blockchain</h3>
+
+<p align="center">
+<strong>
+Hệ thống sử dụng mô hình YOLOv8 để phát hiện người điều khiển xe máy không đội mũ bảo hiểm từ hình ảnh và video. Dữ liệu vi phạm được lưu trữ bằng SQLite, tạo mã băm SHA-256 và xác thực trên Blockchain nhằm đảm bảo tính toàn vẹn, minh bạch và chống giả mạo bằng chứng vi phạm.
+</strong>
+</p>
+
+---
+
+# 🏗️ Kiến trúc hệ thống
+
+<p align="center">
+  <img src="assets/architecture.png" alt="System Architecture" width="800"/>
+</p>
+
+Hệ thống gồm các thành phần chính:
+
+1. 📹 Thu nhận dữ liệu từ ảnh hoặc video.
+2. 🧠 YOLOv8 phát hiện người có mũ và không đội mũ bảo hiểm.
+3. 📸 Lưu ảnh bằng chứng vi phạm.
+4. 🔐 Tạo mã băm SHA-256 cho ảnh vi phạm.
+5. ⛓️ Ghi nhận hash lên Blockchain.
+6. 💾 Lưu thông tin vi phạm vào SQLite.
+7. 📱 Gửi cảnh báo qua Telegram Bot.
+8. 📊 Hiển thị thống kê và xác thực dữ liệu trên Web Dashboard.
+
+---
+
+# ✨ Tính năng chính
+
+## 🧠 Trí tuệ nhân tạo
+
+* Phát hiện người đội mũ bảo hiểm.
+* Phát hiện người không đội mũ bảo hiểm.
+* Nhận diện từ hình ảnh và video.
+* Hỗ trợ xử lý nhiều đối tượng trong cùng khung hình.
+
+## 🔐 Blockchain & Bảo mật
+
+* Tạo mã băm SHA-256 cho ảnh bằng chứng.
+* Lưu hash lên Blockchain.
+* Kiểm tra tính toàn vẹn dữ liệu.
+* Phát hiện dữ liệu bị chỉnh sửa hoặc giả mạo.
+
+## 📊 Quản lý dữ liệu
+
+* Lưu trữ vi phạm bằng SQLite.
+* Quản lý ảnh bằng chứng.
+* Tìm kiếm theo SHA-256.
+* Xác thực dữ liệu vi phạm.
+
+## 📱 Thông báo thời gian thực
+
+* Gửi ảnh vi phạm qua Telegram Bot.
+* Gửi thông tin SHA-256.
+* Gửi mã giao dịch Blockchain.
+
+---
+
+# 🔧 Công nghệ sử dụng
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python\&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite)
+![Ethereum](https://img.shields.io/badge/Ethereum-627EEA?logo=ethereum)
+![Web3.py](https://img.shields.io/badge/Web3.py-F16822)
+![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram)
+
+</div>
+
+### Công nghệ cốt lõi
+
+* Python
+* YOLOv8
+* OpenCV
+* Streamlit
+* SQLite
+* SHA-256
+* Ethereum Blockchain
+* Web3.py
+* Telegram Bot API
+
+---
+
+# 📥 Cài đặt
+
+## Yêu cầu hệ thống
+
+* Python 3.10+
+* Git
+* Streamlit
+* YOLOv8
+* SQLite
+
+## Clone dự án
 
 ```bash
-conda activate robot_env
+git clone https://github.com/USERNAME/helmet-detection-blockchain.git
+cd helmet-detection-blockchain
 ```
 
-Cài dependency:
+## Cài đặt thư viện
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 2. Chạy app Streamlit
-
-Chạy từ thư mục gốc project:
-
-```bash
-streamlit run app/main.py
-```
-
-Mở trình duyệt:
-
-```text
-http://localhost:8501
-```
-
-Trong app, chọn:
-
-- `Hình ảnh`: upload ảnh để nhận diện
-- `Video`: upload video để xử lý
-
-Khi phát hiện vi phạm, app sẽ lưu:
-
-- Ảnh bằng chứng: `app/violations/`
-- Database: `app/violations.db`
-- SHA-256 hash: cột `image_hash`
-- Mã local blockchain: cột `blockchain_tx`
-
-## 3. Chế độ local blockchain
-
-Nếu bạn chỉ chạy local, không cần tạo ví, không cần MetaMask, không cần deploy contract.
-
-Không cần cấu hình các biến này:
-
-```env
-BLOCKCHAIN_RPC_URL=
-BLOCKCHAIN_PRIVATE_KEY=
-BLOCKCHAIN_CONTRACT_ADDRESS=
-```
-
-Khi đó cột `blockchain_tx` sẽ có dạng:
-
-```text
-local-chain:51884e69c78a2185
-```
-
-Đây là mã mô phỏng local, lấy 16 ký tự đầu của SHA-256 hash.
-
-## 4. Cấu hình Telegram
+## Cấu hình Telegram
 
 Tạo file:
 
@@ -75,183 +135,69 @@ Tạo file:
 app/.env
 ```
 
-Thêm:
-
 ```env
-TELEGRAM_TOKEN=token_cua_ban
-TELEGRAM_CHAT_ID=chat_id_cua_ban
+TELEGRAM_TOKEN=YOUR_BOT_TOKEN
+TELEGRAM_CHAT_ID=YOUR_CHAT_ID
 ```
 
-Nếu không cấu hình Telegram, app vẫn chạy nhưng không gửi cảnh báo.
-
-## 5. Backfill hash cho dữ liệu cũ
-
-Một số dòng cũ trong database có thể chưa có `image_hash` và `blockchain_tx`.
-
-Chạy:
+## Chạy hệ thống
 
 ```bash
-python app/backfill_violation_hashes.py
+streamlit run app/main.py
 ```
 
-Script sẽ:
+---
 
-- Tìm dòng chưa có hash
-- Đọc ảnh từ `image_path`
-- Tính SHA-256
-- Ghi `image_hash`
-- Ghi `blockchain_tx` dạng `local-chain:...`
-- Ghi `ipfs_uri` dạng `ipfs://pending/...`
+# 🚀 Quy trình hoạt động
 
-Ví dụ output:
+<p align="center">
+  <img src="assets/workflow.png" width="800"/>
+</p>
 
-```text
-Updated rows: 14
-Missing images: 32
-```
+1. Người dùng tải ảnh hoặc video lên hệ thống.
+2. YOLOv8 thực hiện phát hiện đối tượng.
+3. Xác định người không đội mũ bảo hiểm.
+4. Lưu ảnh bằng chứng.
+5. Tạo SHA-256.
+6. Ghi hash lên Blockchain.
+7. Lưu dữ liệu vào SQLite.
+8. Gửi cảnh báo Telegram.
+9. Hiển thị kết quả trên Dashboard.
 
-Trong đó:
+---
 
-- `Updated rows`: số dòng cập nhật thành công
-- `Missing images`: số dòng không cập nhật được vì ảnh không còn tồn tại
+# 📊 Cơ sở dữ liệu
 
-## 6. Truy vấn database bằng Python
-
-File truy vấn:
-
-```text
-app/query_violations.py
-```
-
-Xem thống kê tổng quan:
-
-```bash
-python app/query_violations.py stats
-```
-
-Xem 10 vi phạm mới nhất:
-
-```bash
-python app/query_violations.py latest
-```
-
-Xem 5 vi phạm mới nhất:
-
-```bash
-python app/query_violations.py latest --limit 5
-```
-
-Xem các dòng chưa có hash:
-
-```bash
-python app/query_violations.py missing-hash
-```
-
-Đếm vi phạm theo ngày:
-
-```bash
-python app/query_violations.py by-date
-```
-
-Xem chi tiết một bản ghi theo ID:
-
-```bash
-python app/query_violations.py detail 1
-```
-
-Tìm theo hash hoặc mã `local-chain`:
-
-```bash
-python app/query_violations.py search-hash 51884e69
-```
-
-## 7. Truy vấn database bằng sqlite3
-
-Mở database:
-
-```bash
-sqlite3 app/violations.db
-```
-
-Xem 10 dòng mới nhất:
+Bảng chính:
 
 ```sql
-SELECT id, timestamp, image_hash, blockchain_tx, image_path
-FROM violations
-ORDER BY id DESC
-LIMIT 10;
+CREATE TABLE violations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp TEXT,
+    camera TEXT,
+    violation_type TEXT,
+    image_path TEXT,
+    confidence REAL,
+    image_hash TEXT,
+    blockchain_tx TEXT,
+    ipfs_uri TEXT
+);
 ```
 
-Xem dòng chưa có hash:
+---
 
-```sql
-SELECT id, timestamp, image_path
-FROM violations
-WHERE image_hash IS NULL OR image_hash = ''
-ORDER BY id DESC;
-```
+# 🔮 Hướng phát triển
 
-Thoát SQLite:
+* Tích hợp IPFS lưu trữ ảnh vi phạm.
+* Mở rộng nhiều loại vi phạm giao thông.
+* Triển khai Blockchain công khai.
+* Tích hợp Camera IoT thời gian thực.
+* Xây dựng nền tảng Smart City.
 
-```sql
-.exit
-```
+---
 
-Xem thêm hướng dẫn SQL tại:
+# 👨‍🎓 Tác giả
 
-```text
-SQL_TEST_README.md
-```
+**Đề tài:** Hệ thống lưu trữ và xác thực vi phạm giao thông không đội mũ bảo hiểm
 
-## 8. Blockchain thật
-
-Nếu muốn gửi hash lên blockchain thật, xem:
-
-```text
-BLOCKCHAIN.md
-```
-
-File smart contract:
-
-```text
-contracts/ViolationRegistry.sol
-```
-
-Khi blockchain thật chạy đúng, cột `blockchain_tx` sẽ có dạng:
-
-```text
-0x...
-```
-
-Nếu chỉ build local, bạn không cần phần này.
-
-## 9. Các lệnh cũ trong project
-
-Chạy file xử lý khác:
-
-```bash
-streamlit run app/processing.py
-```
-
-Chạy server:
-
-```bash
-cd app
-python3 server.py
-```
-
-Chạy stream video:
-
-```bash
-cd app
-python3 stream_video.py
-```
-
-Chạy stream camera:
-
-```bash
-cd app
-python3 stream_cam.py
-```
-
-Ghi chú: có thể đổi model trong hàm `load_model()` của `app/main.py` để test các file weight khác.
+**Công nghệ:** AI + Blockchain + IoT + Computer Vision
